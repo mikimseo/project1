@@ -1,20 +1,25 @@
 "use strict"
 
 //1  задание
-let numberOfFilms = "0";
-numberOfFilms = prompt('Сколько фильмов вы уже посмотрели?');
-
+const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
 document.write(numberOfFilms);
 
 //2 задание
-let moviesDB = {};
-let actorsDB = {};
-let genresDB = [];
-
-let personalMovieDB = {
+const personalMovieDB = {
     count: numberOfFilms,
-    movies: moviesDB,
-    actors: actorsDB,
-    genres: genresDB,
+    movies: {},
+    actors: {},
+    genres: [],
     privat: false
 };
+
+const a = prompt ('Один из последних фильмов?', ''),
+      b = prompt ('Дайте ему оценку?', ''),
+      c = prompt ('Один из последних фильмов?', ''),
+      d = prompt ('Дайте ему оценку?', '');
+
+personalMovieDB.movies[a] = b;
+personalMovieDB.movies[c] = d;
+
+console.log(personalMovieDB);
+
