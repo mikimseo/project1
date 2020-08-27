@@ -15,7 +15,11 @@ const options = {
 }
 
 options.makeTest();
-console.log(Object.keys(options).length);
+
+const {border, bg} = options.colors; //деструкторизация
+console.log(border);
+
+// console.log(Object.keys(options).length);
 
 // console.log(options["colors"]["border"]);
 
