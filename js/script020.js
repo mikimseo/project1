@@ -8,9 +8,13 @@ const options = {
     colors: {
         border: 'black',
         bg: 'red'
+    },
+    makeTest: function() {
+        console.log("TEST");
     }
 }
 
+options.makeTest();
 console.log(Object.keys(options).length);
 
 // console.log(options["colors"]["border"]);
